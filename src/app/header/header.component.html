@@ -11,8 +11,8 @@
     <div class="row">
     <div class="col-lg-9">
     <ul class="header__top__widget">
-        <li><i class="fa fa-map-marker"></i> 96 Avinida São João, São Paulo, BR</li>
-        <li><i class="fa fa-phone"></i> (11) 99999-9999</li>
+        <li><i class="fa fa-map-marker"></i> Rua Massaguaçu 166, São José dos Campos - SP</li>
+        <li><i class="fa fa-phone"></i> (12) 92000-6389</li>
     <li><i class="fa fa-envelope"></i> <a href="" class="__cf_email__" data-cfemail="97def9f1f8d7f4f8fbf8e5fbfef5b9f4f8fa">obrazilvalle@gmail.com</a></li>
     </ul>
     </div>
@@ -67,9 +67,31 @@
     </div>
     </div>
     </div>
+    <nav class="header__menu">
+
+    <ul *ngIf="condition">
+        <li *ngIf="home" class="active"><a (click)="homee()">Home</a></li>
+        <li *ngIf="!home"><a (click)="homee()" >Home</a></li>
+        
+        <li  *ngIf="about" class="active"><a (click)="sobre()">Sobre</a></li>
+        <li  *ngIf="!about"><a (click)="sobre()">Sobre</a></li>
+         
+    
+    
+    
+        <li *ngIf="servico" class="active"><a (click)="servicoo()">Serviços</a></li>
+        <li *ngIf="!servico"><a (click)="servicoo()">Serviços</a></li>
+    
+    
+    
+        <li *ngIf="contat" class="active"><a (click)="contato()">Contato</a></li>
+        <li *ngIf="!contat" ><a (click)="contato()">Contato</a></li>
+        </ul>
+    </nav>
+    
     <div class="canvas__open">
  
-        <span class="fa fa-bars"></span>
+        <span (click)="menu()" class="fa fa-bars"></span>
         </div>
     </div>
     </header>

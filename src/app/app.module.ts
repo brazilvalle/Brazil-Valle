@@ -22,6 +22,15 @@ import { HistoryComponent } from './history/history.component';
 import { TimeComponent } from './time/time.component';
 import { ServicesComponent } from './services/services.component';
 import { TypeserviceComponent } from './typeservice/typeservice.component';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+ 
+const maskConfig: Partial<IConfig> = {
+  validation: false,
+};
+
 
 @NgModule({
   declarations: [
@@ -48,7 +57,11 @@ import { TypeserviceComponent } from './typeservice/typeservice.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxMaskModule.forRoot(maskConfig),
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

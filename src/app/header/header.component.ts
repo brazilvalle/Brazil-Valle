@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   about:any;
   contat:any;
   servico:any;
+  condition:any;
   ngOnInit(): void {
     this.href = this.router.url;
     
@@ -53,6 +54,14 @@ export class HeaderComponent implements OnInit {
   async servicoo(){
     await this.router.navigate(['/servico']);
     await location.reload();
+  }
+
+  async menu(){
+    
+    this.condition = true;
+    let a = setTimeout(() => {
+      this.condition= null;
+    }, 10000);
   }
 
 }
