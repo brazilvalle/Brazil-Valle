@@ -31,7 +31,7 @@ export class FormComponent implements OnInit {
 
   submitForm() {
    this.data.valor = this.val;
-   console.log(this.data)
+   
    if(this.data.nome == null){
      this.resposta = 'Prencher o nome';
      this.sucesso = false;
@@ -48,6 +48,9 @@ export class FormComponent implements OnInit {
    let a = setTimeout(() => {
     this.sucesso = null;
   }, 2000);
+  this.apiService.postproposta(this.data).subscribe((response)=>{
+    console.log(response)
+  })
   }
   }
 
