@@ -3,4 +3,5 @@ export class Service {
    telefone: string;
    email: string;
    valor: string;
+   mensagem: string;
 }

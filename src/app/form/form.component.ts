@@ -28,7 +28,7 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
     
   }
-
+ 
   submitForm() {
    this.data.valor = this.val;
    

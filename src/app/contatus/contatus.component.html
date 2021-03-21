@@ -11,7 +11,7 @@ background-image:url('https://preview.colorlib.com/theme/loanday/img/breadcrumb/
     <div class="breadcrumb__text">
     <h2>Nosso Contato</h2>
     </div>
-    </div>
+    </div> 
     </div>
     </div>
     </div>
@@ -26,17 +26,17 @@ background-image:url('https://preview.colorlib.com/theme/loanday/img/breadcrumb/
     <h2>Fale conosco</h2>
     <p>Entre em contato conosco ou envie-nos um e-mail.</p>
     </div>
-    <form action="#">
+    <form action="#"> 
     <div class="input-list">
-    <input type="text" style="width: 31%;" placeholder="Seu nome">
-    <input type="text" style="width: 31%;" placeholder="Seu email">
-    <input type="text" style="width: 32%;" placeholder="Seu telefone">
+    <input type="text" name="nome" [(ngModel)]="data.nome" style="width: 31%;" placeholder="Seu nome">
+    <input type="text" name="email" [(ngModel)]="data.email" style="width: 31%;" placeholder="Seu email">
+    <input type="text" name="telefone" [(ngModel)]="data.telefone" style="width: 32%;" placeholder="Seu telefone">
     </div>
-    <textarea placeholder="Sua mensagem"></textarea>
-    <button type="submit" class="site-btn">Enviar Mensagem</button>
+    <textarea name="mensagem" [(ngModel)]="data.mensagem" placeholder="Sua mensagem"></textarea>
+    <button (click)="submitForm()" class="site-btn">Enviar Mensagem</button>
     </form>
     </div>
-    </div>
+    </div> 
     </div>
     </div>
     <div class="row">
